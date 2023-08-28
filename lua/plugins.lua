@@ -1,19 +1,20 @@
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	use 'neovim/nvim-lspconfig'
-	use 'hrsh7th/nvim-cmp'
+	use 'Vimjas/vim-python-pep8-indent'
 	use 'ibhagwan/fzf-lua'
 	use 'kylechui/nvim-surround'
 	use	'windwp/nvim-autopairs'
-	use 'CRAG666/betterTerm.nvim'
 	use 'jackMort/ChatGPT.nvim'
 	use "MunifTanjim/nui.nvim"
 	use "nvim-lua/plenary.nvim"
 	use	"nacro90/numb.nvim"
+	use "rktjmp/paperplanes.nvim"
 	use "nvim-telescope/telescope.nvim"
 	use "ellisonleao/gruvbox.nvim"
 	use "folke/tokyonight.nvim"
-
+	use "ray-x/starry.nvim"
+	use {'neoclide/coc.nvim', branch = 'release'}
 	use {
 		"utilyre/barbecue.nvim",
 		requires = {
@@ -26,7 +27,6 @@ return require('packer').startup(function(use)
 		requires = { "nvim-tree/nvim-web-devicons", opt = true }
 	}
 	use "yorickpeterse/nvim-window"
-	use "williamboman/mason.nvim"
 	use "andweeb/presence.nvim"
 	use {
 		'glepnir/dashboard-nvim',

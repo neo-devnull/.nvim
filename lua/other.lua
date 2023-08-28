@@ -1,12 +1,17 @@
 local chatgpt = require('chatgpt')
-local betterTerm = require("betterTerm")
+local paperplanes = require('paperplanes')
+
 require('numb').setup()
 require('nvim-surround').setup({})
 require("nvim-autopairs").setup({})
 require('fzf-lua')
 
-vim.keymap.set({"n", "t"}, "<c-p>", betterTerm.open, { desc = "Open terminal"})
-
+paperplanes.setup({
+	register = "+",
+	provider = "0x0.st",
+	provider_options = {},
+	notifier = vim.notify or print
+})
 chatgpt.setup({})
 
 vim.keymap.set("n", "<c-F>",
