@@ -1,6 +1,7 @@
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	use 'neovim/nvim-lspconfig'
+	use 'glepnir/dashboard-nvim'
 	use 'Vimjas/vim-python-pep8-indent'
 	use 'ibhagwan/fzf-lua'
 	use 'kylechui/nvim-surround'
@@ -14,6 +15,9 @@ return require('packer').startup(function(use)
 	use "ellisonleao/gruvbox.nvim"
 	use "folke/tokyonight.nvim"
 	use "ray-x/starry.nvim"
+	use "pangloss/vim-javascript"
+	use "leafgarland/typescript-vim"
+	use "MaxMEllon/vim-jsx-pretty"
 	use {'neoclide/coc.nvim', branch = 'release'}
 	use {
 		"utilyre/barbecue.nvim",
@@ -28,18 +32,5 @@ return require('packer').startup(function(use)
 	}
 	use "yorickpeterse/nvim-window"
 	use "andweeb/presence.nvim"
-	use {
-		'glepnir/dashboard-nvim',
-		event = 'VimEnter',
-		config = function()
-			require('dashboard').setup {
-				theme = 'hyper',
-				config = {
-					header = {"Welcome"}
-				}
-			}
-		end,
-		requires = {'nvim-tree/nvim-web-devicons'}
-	}
 	use { "catppuccin/nvim", as = "catppuccin" }
 end)
