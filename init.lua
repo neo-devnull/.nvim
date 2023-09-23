@@ -1,5 +1,6 @@
 require('plugins')
 require("lsp")
+require("coc")
 require("other")
 require("theme")
 vim.cmd('set nu')
